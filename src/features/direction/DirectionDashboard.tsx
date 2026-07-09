@@ -436,7 +436,7 @@ function CarteSection() {
 }
 
 // ─── Profile section ──────────────────────────────────────────────────────────
-function ProfileSection({ appName, onLogout }: { appName: string; onLogout: () => void }) {
+function ProfileSection({ onLogout }: { onLogout: () => void }) {
   const [dark, setDark] = useState(false)
   const [notif, setNotif] = useState(true)
   const [lang, setLang] = useState('fr')
@@ -527,9 +527,7 @@ interface DirectionDashboardProps {
   onSwitchRole?: () => void
 }
 
-const maxZ = Math.max(...ZONES_RAW.map(z => z.count))
-
-export default function DirectionDashboard({ appName = 'Wara space', onSwitchRole }: DirectionDashboardProps) {
+export default function DirectionDashboard({ appName = 'Wara space' }: DirectionDashboardProps) {
   const [nav, setNav] = useState<Nav>('apercu')
   const [period, setPeriod] = useState<Period>('sem')
   const [sort, setSort] = useState('ca')
@@ -643,7 +641,7 @@ export default function DirectionDashboard({ appName = 'Wara space', onSwitchRol
 
         {nav === 'apercu' && <ApercuSection sort={sort} setSort={setSort} />}
         {nav === 'carte' && <CarteSection />}
-        {nav === 'profile' && <ProfileSection appName={appName} onLogout={() => {}} />}
+        {nav === 'profile' && <ProfileSection onLogout={() => {}} />}
         {['equipe', 'prospects', 'relances'].includes(nav) && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: 320, gap: 14, color: C.muted }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 40, height: 40, opacity: .4 }}><rect width="20" height="20" x="2" y="2" rx="4" /><path d="M8 12h8" /><path d="M12 8v8" /></svg>

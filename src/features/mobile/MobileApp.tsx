@@ -26,21 +26,21 @@ const F = {
 
 // ─── Static data ─────────────────────────────────────────────────────────────
 const PROSPECTS: Prospect[] = [
-  { id: 1, nom: 'Ets. Njoya & Fils', secteur: 'Quincaillerie', cat: 'grossiste', spec: 'Ouvert 7h–19h · livraison le matin', ville: 'Douala · Akwa', statut: 'chaud', phone: '+237 6 91 24 55 08', last: '2j', historique: [{ date: '12 juil.', objet: 'Négociation', resultat: 'À relancer' }, { date: '28 juin', objet: 'Prospection', resultat: 'Intéressé' }] },
-  { id: 2, nom: 'Marché Mboppi Grossiste', secteur: 'Alimentaire', cat: 'grossiste', spec: '', ville: 'Douala · Nkololoun', statut: 'tiede', phone: '+237 6 55 10 42 77', last: '5j', historique: [{ date: '8 juil.', objet: 'Livraison', resultat: 'Commande' }] },
-  { id: 3, nom: 'Pharmacie du Wouri', secteur: 'Santé', cat: 'boutique', spec: '', ville: 'Douala · Bonanjo', statut: 'froid', phone: '+237 6 99 03 18 21', last: '12j', historique: [] },
-  { id: 4, nom: 'Boulangerie Saker', secteur: 'Agroalimentaire', cat: 'boutique', spec: 'Fermé le lundi', ville: 'Douala · Bonapriso', statut: 'chaud', phone: '+237 6 78 66 90 14', last: 'hier', historique: [{ date: '3 juil.', objet: 'Prospection', resultat: 'Intéressé' }] },
-  { id: 5, nom: 'Quincaillerie Bimeg', secteur: 'BTP', cat: 'grossiste', spec: '', ville: 'Douala · Bépanda', statut: 'tiede', phone: '+237 6 90 47 32 05', last: '8j', historique: [] },
-  { id: 6, nom: 'Ets. Tchakounté', secteur: 'Distribution', cat: 'grossiste', spec: '', ville: 'Yaoundé · Mvog-Mbi', statut: 'froid', phone: '+237 6 74 22 88 61', last: '20j', historique: [] },
-  { id: 7, nom: 'Café Sic', secteur: 'Restauration', cat: 'resto', spec: '', ville: 'Douala · Deido', statut: 'tiede', phone: '+237 6 65 39 11 90', last: '3j', historique: [{ date: '1 juil.', objet: 'Relance', resultat: 'À relancer' }] },
-  { id: 8, nom: 'Superette Bonamoussadi', secteur: 'Commerce', cat: 'supermarche', spec: '', ville: 'Douala · Bonamoussadi', statut: 'chaud', phone: '+237 6 82 50 74 33', last: '4j', historique: [] },
+  { id: 'p1', raisonSociale: 'Ets. Njoya & Fils', nom: 'Ets. Njoya & Fils', secteur: 'Quincaillerie', cat: 'grossiste', spec: 'Ouvert 7h–19h · livraison le matin', ville: 'Douala · Akwa', statut: 'CHAUD', telephone: '+237 6 91 24 55 08', last: '2j', historique: [{ date: '12 juil.', objet: 'Négociation', resultat: 'À relancer' }, { date: '28 juin', objet: 'Prospection', resultat: 'Intéressé' }] },
+  { id: 'p2', raisonSociale: 'Marché Mboppi Grossiste', nom: 'Marché Mboppi Grossiste', secteur: 'Alimentaire', cat: 'grossiste', spec: '', ville: 'Douala · Nkololoun', statut: 'TIEDE', telephone: '+237 6 55 10 42 77', last: '5j', historique: [{ date: '8 juil.', objet: 'Livraison', resultat: 'Commande' }] },
+  { id: 'p3', raisonSociale: 'Pharmacie du Wouri', nom: 'Pharmacie du Wouri', secteur: 'Santé', cat: 'boutique', spec: '', ville: 'Douala · Bonanjo', statut: 'FROID', telephone: '+237 6 99 03 18 21', last: '12j', historique: [] },
+  { id: 'p4', raisonSociale: 'Boulangerie Saker', nom: 'Boulangerie Saker', secteur: 'Agroalimentaire', cat: 'boutique', spec: 'Fermé le lundi', ville: 'Douala · Bonapriso', statut: 'CHAUD', telephone: '+237 6 78 66 90 14', last: 'hier', historique: [{ date: '3 juil.', objet: 'Prospection', resultat: 'Intéressé' }] },
+  { id: 'p5', raisonSociale: 'Quincaillerie Bimeg', nom: 'Quincaillerie Bimeg', secteur: 'BTP', cat: 'grossiste', spec: '', ville: 'Douala · Bépanda', statut: 'TIEDE', telephone: '+237 6 90 47 32 05', last: '8j', historique: [] },
+  { id: 'p6', raisonSociale: 'Ets. Tchakounté', nom: 'Ets. Tchakounté', secteur: 'Distribution', cat: 'grossiste', spec: '', ville: 'Yaoundé · Mvog-Mbi', statut: 'FROID', telephone: '+237 6 74 22 88 61', last: '20j', historique: [] },
+  { id: 'p7', raisonSociale: 'Café Sic', nom: 'Café Sic', secteur: 'Restauration', cat: 'resto', spec: '', ville: 'Douala · Deido', statut: 'TIEDE', telephone: '+237 6 65 39 11 90', last: '3j', historique: [{ date: '1 juil.', objet: 'Relance', resultat: 'À relancer' }] },
+  { id: 'p8', raisonSociale: 'Superette Bonamoussadi', nom: 'Superette Bonamoussadi', secteur: 'Commerce', cat: 'supermarche', spec: '', ville: 'Douala · Bonamoussadi', statut: 'CHAUD', telephone: '+237 6 82 50 74 33', last: '4j', historique: [] },
 ]
 
 const RELANCES_BASE: Relance[] = [
-  { id: 'r1', nom: 'Ets. Njoya & Fils', motif: 'Envoyer le devis quincaillerie', due: 'today', echue: true },
-  { id: 'r2', nom: 'Boulangerie Saker', motif: 'Livrer les échantillons', due: 'today', echue: false },
-  { id: 'r3', nom: 'Café Sic', motif: 'Relancer la proposition', due: 'demain', echue: false, dueText: 'DEMAIN' },
-  { id: 'r4', nom: 'Pharmacie du Wouri', motif: 'Reprendre contact', due: '3j', echue: false, dueText: 'DANS 3J' },
+  { id: 'r1', nom: 'Ets. Njoya & Fils', motif: 'Envoyer le devis quincaillerie', echeance: new Date().toISOString(), statut: 'A_FAIRE', due: 'today', echue: true },
+  { id: 'r2', nom: 'Boulangerie Saker', motif: 'Livrer les échantillons', echeance: new Date().toISOString(), statut: 'A_FAIRE', due: 'today', echue: false },
+  { id: 'r3', nom: 'Café Sic', motif: 'Relancer la proposition', echeance: new Date(Date.now() + 86400000).toISOString(), statut: 'A_FAIRE', due: 'demain', echue: false, dueText: 'DEMAIN' },
+  { id: 'r4', nom: 'Pharmacie du Wouri', motif: 'Reprendre contact', echeance: new Date(Date.now() + 3 * 86400000).toISOString(), statut: 'A_FAIRE', due: '3j', echue: false, dueText: 'DANS 3J' },
 ]
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -53,13 +53,13 @@ function initials(nom: string) {
 }
 
 function chipStyle(statut: string) {
-  const m: Record<string, { bg: string; fg: string }> = { chaud: C.chaud, tiede: C.tiede, froid: C.froid }
+  const m: Record<string, { bg: string; fg: string }> = { CHAUD: C.chaud, TIEDE: C.tiede, FROID: C.froid, NOUVEAU: C.tiede, CLIENT: C.success, PERDU: { bg: '#F1E9DD', fg: '#8A7E71' } }
   const { bg, fg } = m[statut] || { bg: '#eee', fg: '#666' }
   return { display: 'inline-block', fontFamily: F.mono, fontWeight: 600, fontSize: 10, letterSpacing: '.06em', textTransform: 'uppercase' as const, padding: '4px 8px', borderRadius: 6, background: bg, color: fg, whiteSpace: 'nowrap' as const }
 }
 
 function chipLabel(statut: string) {
-  return { chaud: '● Chaud', tiede: '● Tiède', froid: '● Froid' }[statut] || statut
+  return { CHAUD: '● Chaud', TIEDE: '● Tiède', FROID: '● Froid', NOUVEAU: '● Nouveau', CLIENT: '● Client', PERDU: '● Perdu' }[statut] || statut
 }
 
 // ─── SVG icons ───────────────────────────────────────────────────────────────
@@ -189,8 +189,8 @@ function LoginScreen({ appName, onLogin }: { appName: string; onLogin: () => voi
 }
 
 // ─── Screen: Home ─────────────────────────────────────────────────────────────
-function HomeScreen({ appName, offline, pending, relancesToday, onNewVisit, onGoProspects, onGoRelances, onGoPlan, onGoReport, onSync, onLogout }:
-  { appName: string; offline: boolean; pending: number; relancesToday: Relance[]; onNewVisit: () => void; onGoProspects: () => void; onGoRelances: () => void; onGoPlan: () => void; onGoReport: () => void; onSync: () => void; onLogout: () => void }) {
+function HomeScreen({ offline, pending, relancesToday, onNewVisit, onGoRelances, onGoPlan, onGoReport, onSync, onLogout }:
+  { offline: boolean; pending: number; relancesToday: Relance[]; onNewVisit: () => void; onGoRelances: () => void; onGoPlan: () => void; onGoReport: () => void; onSync: () => void; onLogout: () => void }) {
   return (
     <div style={{ paddingBottom: 24 }}>
       <div style={{ position: 'relative', overflow: 'hidden', padding: '10px 20px 8px' }}>
@@ -312,10 +312,10 @@ function HomeScreen({ appName, offline, pending, relancesToday, onNewVisit, onGo
 
 // ─── Screen: Prospects ───────────────────────────────────────────────────────
 function ProspectsScreen({ prospects, onOpenProspect, onNewProspect }: {
-  prospects: Prospect[]; onOpenProspect: (id: number) => void; onNewProspect: () => void
+  prospects: Prospect[]; onOpenProspect: (id: string) => void; onNewProspect: () => void
 }) {
   const [search, setSearch] = useState('')
-  const [filter, setFilter] = useState<'tous' | 'chaud' | 'tiede' | 'froid'>('tous')
+  const [filter, setFilter] = useState<'tous' | 'CHAUD' | 'TIEDE' | 'FROID'>('tous')
 
   const filtered = prospects.filter(p => {
     if (filter !== 'tous' && p.statut !== filter) return false
@@ -359,15 +359,15 @@ function ProspectsScreen({ prospects, onOpenProspect, onNewProspect }: {
             style={{ border: 'none', outline: 'none', background: 'transparent', fontFamily: F.ui, fontSize: 15, color: C.encre, width: '100%' }} />
         </div>
         <div style={{ display: 'flex', gap: 8, marginBottom: 16, overflowX: 'auto', paddingBottom: 4 }}>
-          {(['tous', 'chaud', 'tiede', 'froid'] as const).map(f => (
+          {(['tous', 'CHAUD', 'TIEDE', 'FROID'] as const).map(f => (
             <button key={f} onClick={() => setFilter(f)} style={filterBtn(filter === f)}>
-              {f === 'tous' ? 'Tous' : f === 'chaud' ? '● Chaud' : f === 'tiede' ? '● Tiède' : '● Froid'}
+              {f === 'tous' ? 'Tous' : f === 'CHAUD' ? '● Chaud' : f === 'TIEDE' ? '● Tiède' : '● Froid'}
             </button>
           ))}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
           {filtered.map(p => (
-            <div key={p.id} onClick={() => onOpenProspect(p.id)} style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, padding: '13px 14px', display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer' }}>
+            <div key={p.id} onClick={() => onOpenProspect(p.id!)} style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, padding: '13px 14px', display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer' }}>
               <div style={{ width: 44, height: 44, borderRadius: 12, background: C.encre, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: F.display, fontWeight: 800, fontSize: 15, color: C.ambre, flex: 'none' }}>{initials(p.nom)}</div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontWeight: 700, fontSize: 16, color: C.encre, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{p.nom}</div>
@@ -416,10 +416,10 @@ function DetailScreen({ prospect, onBack, onStartVisit }: { prospect: Prospect; 
       </div>
       <div style={{ padding: '18px 20px 0' }}>
         <span style={{ ...chipStyle(prospect.statut), fontSize: 11, padding: '5px 11px' }}>
-          {{ chaud: '● Prospect chaud', tiede: '● Prospect tiède', froid: '● Prospect froid' }[prospect.statut]}
+          {{ CHAUD: '● Prospect chaud', TIEDE: '● Prospect tiède', FROID: '● Prospect froid', NOUVEAU: '● Nouveau prospect', CLIENT: '● Client', PERDU: '● Perdu' }[prospect.statut]}
         </span>
         <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 14, padding: 16, margin: '16px 0 20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>{icons.phone}<span style={{ fontFamily: F.mono, fontSize: 14, color: C.encre }}>{prospect.phone}</span></div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>{icons.phone}<span style={{ fontFamily: F.mono, fontSize: 14, color: C.encre }}>{prospect.telephone}</span></div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>{icons.pin}<span style={{ fontSize: 14.5, color: C.encre }}>{prospect.ville}</span></div>
         </div>
         {prospect.spec && (
@@ -429,17 +429,17 @@ function DetailScreen({ prospect, onBack, onStartVisit }: { prospect: Prospect; 
           </div>
         )}
         <div style={{ fontFamily: F.display, fontWeight: 800, fontSize: 18, color: C.encre, marginBottom: 11 }}>Historique des visites</div>
-        {prospect.historique.length === 0 ? (
+        {(prospect.historique ?? []).length === 0 ? (
           <div style={{ background: '#F1E9DD', border: '1px dashed #D8CDBC', borderRadius: 13, padding: 18, textAlign: 'center', fontSize: 13.5, color: C.muted }}>
             Aucune visite enregistrée. Touchez «&nbsp;Visite&nbsp;» pour commencer.
           </div>
         ) : (
           <div>
-            {prospect.historique.map((h, i) => (
+            {(prospect.historique ?? []).map((h, i) => (
               <div key={i} style={{ display: 'flex', gap: 13 }}>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 'none' }}>
                   <div style={{ width: 11, height: 11, borderRadius: 99, background: C.braise, marginTop: 5 }} />
-                  {i < prospect.historique.length - 1 && <div style={{ width: 2, flex: 1, background: C.border }} />}
+                  {i < (prospect.historique ?? []).length - 1 && <div style={{ width: 2, flex: 1, background: C.border }} />}
                 </div>
                 <div style={{ paddingBottom: 16, flex: 1 }}>
                   <div style={{ fontFamily: F.mono, fontSize: 11, color: '#A89C90' }}>{h.date}</div>
@@ -715,11 +715,11 @@ interface MobileAppProps {
   onSwitchRole?: () => void
 }
 
-export default function MobileApp({ appName = 'Wara space', onSwitchRole }: MobileAppProps) {
+export default function MobileApp({ appName = 'Wara space' }: MobileAppProps) {
   const [screen, setScreen] = useState<Screen>('welcome')
   const [offline, setOffline] = useState(false)
   const [pending, setPending] = useState(2)
-  const [selectedId, setSelectedId] = useState(1)
+  const [selectedId, setSelectedId] = useState<string>('p1')
   const [done, setDone] = useState<string[]>([])
   const [toast, setToast] = useState('')
 
@@ -732,7 +732,7 @@ export default function MobileApp({ appName = 'Wara space', onSwitchRole }: Mobi
 
   const relances = RELANCES_BASE.map(r => r)
   const relancesToday = relances.filter(r => r.due === 'today' && !done.includes(r.id))
-  const prospect = PROSPECTS.find(p => p.id === selectedId) || PROSPECTS[0]
+  const prospect = PROSPECTS.find(p => p.id === selectedId) ?? PROSPECTS[0]
 
   const showTabbar = ['home', 'prospects', 'relances', 'detail', 'profile'].includes(screen)
 
@@ -768,8 +768,8 @@ export default function MobileApp({ appName = 'Wara space', onSwitchRole }: Mobi
             {screen === 'login' && <LoginScreen appName={appName} onLogin={() => go('home')} />}
             {screen === 'home' && (
               <HomeScreen
-                appName={appName} offline={offline} pending={pending} relancesToday={relancesToday}
-                onNewVisit={() => go('visit')} onGoProspects={() => go('prospects')}
+                offline={offline} pending={pending} relancesToday={relancesToday}
+                onNewVisit={() => go('visit')}
                 onGoRelances={() => go('relances')} onGoPlan={() => flash('Plan de prospection')}
                 onGoReport={() => flash('Rapport généré')}
                 onSync={() => { if (!offline) { setPending(0); flash('Tout est synchronisé') } else { flash('Hors-ligne — synchro en attente') } }}

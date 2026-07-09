@@ -142,7 +142,7 @@ export default function LoginPage() {
             {loading ? 'Connexion…' : `Accéder à l'espace ${meta.label.toLowerCase()}`}
           </button>
 
-          <div style={{ marginTop: 'auto', paddingTop: 28, borderTop: '1px solid #EAE1D6', marginTop: 28 }}>
+          <div style={{ paddingTop: 28, borderTop: '1px solid #EAE1D6', marginTop: 28 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: F.mono, fontSize: 11, color: C.muted }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 15, height: 15 }}><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
               Démo — identifiants pré-remplis selon le rôle sélectionné.

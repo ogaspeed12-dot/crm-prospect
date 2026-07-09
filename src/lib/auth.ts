@@ -32,9 +32,8 @@ export function isMobileDevice(): boolean {
   return window.innerWidth < 768 || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
 }
 
-export function resolveInterface(role: UserRole, mobile: boolean): 'mobile' | 'direction' | 'admin' {
+export function resolveInterface(role: UserRole, _mobile?: boolean): 'mobile' | 'direction' | 'admin' {
   if (role === 'admin') return 'admin'
   if (role === 'manager') return 'direction'
-  // commercial → mobile on small screen, else also mobile (terrain app)
   return 'mobile'
 }

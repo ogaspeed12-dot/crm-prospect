@@ -368,7 +368,7 @@ const PAGE_META: Record<Nav, [string, string, string]> = {
   profile: ['Mon profil', 'compte, rôle et préférences', 'profil'],
 }
 
-export default function AdminSpace({ appName = 'Wara space', onSwitchRole }: AdminSpaceProps) {
+export default function AdminSpace({ appName = 'Wara space' }: AdminSpaceProps) {
   const [nav, setNav] = useState<Nav>('users')
   const [showInvite, setShowInvite] = useState(false)
 
